@@ -1,0 +1,51 @@
+## View: http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+logging:
+    file: angularJS.log
+    level.*: DEBUG
+spring:
+    application:
+        name: angularJS
+    jpa:
+        sql: true
+        open-in-view: true
+        generate-ddl: false
+        hibernate:
+            ddl-auto: create-drop
+    data:
+        jpa:
+            repositories:
+                enabled: true
+    datasource:
+        initialize: true
+        driverClassName: org.h2.Driver
+        url: jdbc:h2:medialog:./h2database;AUTO_SERVER=TRUE
+        username: medialog
+        password: angularjs
+    view:
+        prefix: /webapp/app/
+        suffix: .html
+    h2:
+        console:
+            enabled: true
+            path: /h2-console
+    http:
+        encoding:
+            charset: UTF-8
+            enabled: true
+            force: true
+
+angularjs:
+    swagger:
+        title: AgularJS API
+        description: AgularJS API documentation
+        version: 0.0.1
+        termsOfServiceUrl:
+        contactName:
+        contactUrl:
+        contactEmail:
+        license:
+        licenseUrl:
+
+server:
+    port: 8080
+
